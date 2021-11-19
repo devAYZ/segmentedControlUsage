@@ -7,18 +7,22 @@
 
 import UIKit
 
-class SmilesVC: UIViewController {
+final class SmilesVC: UIViewController {
 
+    // MARK: IOButlets
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var testView: UIView!
     
+    // MARK: Properties
     public var index: Int?
     
+    // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
     }
     
+    // MARK: Setup method
     private func setupView() {
         view.backgroundColor = .blue
         label?.text = "Test Here"
@@ -30,7 +34,7 @@ class SmilesVC: UIViewController {
         testView?.isUserInteractionEnabled = true
     }
     
-    
+    // MARK: Handle Tap Action on View
     @objc func handleViewTap() {
         debugPrint("devAYZ, Yesss")
         debugPrint(index ?? 0)

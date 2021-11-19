@@ -7,22 +7,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
+    // MARK: IOButlets
     @IBOutlet weak var segControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
     
-    let spectranet = SpectranetVC(nibName: "SpectranetVC", bundle: Bundle(for: SpectranetVC.self))
+    // MARK: Properties
+    lazy var spectranet: SpectranetVC = {
+        let view = SpectranetVC(nibName: "SpectranetVC", bundle: Bundle(for: SpectranetVC.self))
+        return view
+    }()
     let smiles = SmilesVC(nibName: "SmilesVC", bundle: Bundle(for: SmilesVC.self))
     
+    // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         segControl.addTarget(self, action: #selector(handleSegControl(segment:)), for: .valueChanged)
         setupView()
     }
     
+    // MARK: Setup method
     private func setupView() {
-        
         segControl.setTitleTextAttributes(
             [NSAttributedString.Key.foregroundColor: UIColor.white,
              NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .light)],for: .selected)
@@ -46,6 +52,7 @@ class ViewController: UIViewController {
         smiles.didMove(toParent: self)
     }
     
+    // MARK: Handle switching of Segments
     @objc func handleSegControl(segment: UISegmentedControl) {
         spectranet.index = segment.selectedSegmentIndex
         smiles.index = segment.selectedSegmentIndex
