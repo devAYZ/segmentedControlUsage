@@ -12,6 +12,8 @@ class SmilesVC: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var testView: UIView!
     
+    public var index: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -31,5 +33,6 @@ class SmilesVC: UIViewController {
     
     @objc func handleViewTap() {
         debugPrint("devAYZ, Yesss")
+        debugPrint(index ?? 0)
     }
 }

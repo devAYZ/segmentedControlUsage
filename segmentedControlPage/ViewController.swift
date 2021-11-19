@@ -30,7 +30,8 @@ class ViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.purple
             ],for: .normal)
         segControl.layer.borderWidth = 1
-        segControl.layer.borderColor = UIColor(red:0/255, green:225/255, blue:0/255, alpha: 1).cgColor
+        segControl.layer.borderColor = UIColor.purple.cgColor
+        //UIColor(red:128, green:0, blue:128, alpha: 1).cgColor
             
         addChild(spectranet)
         addChild(smiles)
@@ -46,6 +47,8 @@ class ViewController: UIViewController {
     }
     
     @objc func handleSegControl(segment: UISegmentedControl) {
+        spectranet.index = segment.selectedSegmentIndex
+        smiles.index = segment.selectedSegmentIndex
         switch segment.selectedSegmentIndex {
         case 0:
             containerView.bringSubviewToFront(spectranet.view)

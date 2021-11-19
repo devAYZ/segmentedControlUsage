@@ -11,6 +11,8 @@ class SpectranetVC: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
+    public var index: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

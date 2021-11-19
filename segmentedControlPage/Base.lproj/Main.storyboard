@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="15.942028985507248" y="93.75"/>
         </scene>
-        <!--SpectranetVC-->
+        <!--View Controller-->
         <scene sceneID="Sds-4C-uNc">
             <objects>
-                <viewController id="gUM-sv-2ji" customClass="SpectranetVC" customModule="segmentedControlPage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gUM-sv-2ji" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Gc-g8-DRI">
                         <rect key="frame" x="0.0" y="0.0" width="365" height="207"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
