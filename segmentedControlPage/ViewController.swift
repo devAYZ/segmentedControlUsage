@@ -8,12 +8,52 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var segControl: UISegmentedControl!
+    @IBOutlet weak var containerView: UIView!
+    
+    let spectranet = SpectranetVC(nibName: "SpectranetVC", bundle: Bundle(for: SpectranetVC.self))
+    let smiles = SmilesVC(nibName: "SmilesVC", bundle: Bundle(for: SmilesVC.self))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        segControl.addTarget(self, action: #selector(handleSegControl(segment:)), for: .valueChanged)
+        setupView()
     }
-
-
+    
+    private func setupView() {
+        
+        segControl.setTitleTextAttributes(
+            [NSAttributedString.Key.foregroundColor: UIColor.white,
+             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .light)],for: .selected)
+        segControl.setTitleTextAttributes(
+            [NSAttributedString.Key.foregroundColor: UIColor.purple
+            ],for: .normal)
+        segControl.layer.borderWidth = 1
+//        segControl.layer.borderColor = UIColor().get
+            
+        
+        addChild(spectranet)
+        addChild(smiles)
+        
+        spectranet.view.frame = containerView.bounds
+        smiles.view.frame = containerView.bounds
+        
+        containerView.addSubview(smiles.view)
+        containerView.addSubview(spectranet.view)
+        
+        spectranet.didMove(toParent: self)
+        smiles.didMove(toParent: self)
+    }
+    
+    @objc func handleSegControl(segment: UISegmentedControl) {
+        switch segment.selectedSegmentIndex {
+        case 0:
+            containerView.bringSubviewToFront(spectranet.view)
+            
+        default:
+            containerView.bringSubviewToFront(smiles.view)
+        }
+    }
 }
 

@@ -16,6 +16,10 @@
 		04A59F322745C2AB008AA616 /* segmentedControlPageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59F312745C2AB008AA616 /* segmentedControlPageTests.swift */; };
 		04A59F3C2745C2AB008AA616 /* segmentedControlPageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59F3B2745C2AB008AA616 /* segmentedControlPageUITests.swift */; };
 		04A59F3E2745C2AB008AA616 /* segmentedControlPageUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59F3D2745C2AB008AA616 /* segmentedControlPageUITestsLaunchTests.swift */; };
+		04A59F4E2745CDA9008AA616 /* SpectranetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59F4C2745CDA9008AA616 /* SpectranetVC.swift */; };
+		04A59F4F2745CDA9008AA616 /* SpectranetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A59F4D2745CDA9008AA616 /* SpectranetVC.xib */; };
+		04A59F532745CDD4008AA616 /* SmilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A59F512745CDD4008AA616 /* SmilesVC.swift */; };
+		04A59F542745CDD4008AA616 /* SmilesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A59F522745CDD4008AA616 /* SmilesVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		04A59F372745C2AB008AA616 /* segmentedControlPageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = segmentedControlPageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A59F3B2745C2AB008AA616 /* segmentedControlPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentedControlPageUITests.swift; sourceTree = "<group>"; };
 		04A59F3D2745C2AB008AA616 /* segmentedControlPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentedControlPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04A59F4C2745CDA9008AA616 /* SpectranetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectranetVC.swift; sourceTree = "<group>"; };
+		04A59F4D2745CDA9008AA616 /* SpectranetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpectranetVC.xib; sourceTree = "<group>"; };
+		04A59F512745CDD4008AA616 /* SmilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmilesVC.swift; sourceTree = "<group>"; };
+		04A59F522745CDD4008AA616 /* SmilesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmilesVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				04A59F1A2745C2A9008AA616 /* AppDelegate.swift */,
 				04A59F1C2745C2A9008AA616 /* SceneDelegate.swift */,
 				04A59F1E2745C2A9008AA616 /* ViewController.swift */,
+				04A59F4A2745CD75008AA616 /* scenes */,
 				04A59F202745C2A9008AA616 /* Main.storyboard */,
 				04A59F232745C2AB008AA616 /* Assets.xcassets */,
 				04A59F252745C2AB008AA616 /* LaunchScreen.storyboard */,
@@ -125,6 +134,33 @@
 				04A59F3D2745C2AB008AA616 /* segmentedControlPageUITestsLaunchTests.swift */,
 			);
 			path = segmentedControlPageUITests;
+			sourceTree = "<group>";
+		};
+		04A59F4A2745CD75008AA616 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				04A59F4B2745CD8C008AA616 /* Spectranet */,
+				04A59F502745CDB0008AA616 /* Smiles */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		04A59F4B2745CD8C008AA616 /* Spectranet */ = {
+			isa = PBXGroup;
+			children = (
+				04A59F4C2745CDA9008AA616 /* SpectranetVC.swift */,
+				04A59F4D2745CDA9008AA616 /* SpectranetVC.xib */,
+			);
+			path = Spectranet;
+			sourceTree = "<group>";
+		};
+		04A59F502745CDB0008AA616 /* Smiles */ = {
+			isa = PBXGroup;
+			children = (
+				04A59F512745CDD4008AA616 /* SmilesVC.swift */,
+				04A59F522745CDD4008AA616 /* SmilesVC.xib */,
+			);
+			path = Smiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +267,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A59F542745CDD4008AA616 /* SmilesVC.xib in Resources */,
 				04A59F272745C2AB008AA616 /* LaunchScreen.storyboard in Resources */,
 				04A59F242745C2AB008AA616 /* Assets.xcassets in Resources */,
 				04A59F222745C2A9008AA616 /* Main.storyboard in Resources */,
+				04A59F4F2745CDA9008AA616 /* SpectranetVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A59F1F2745C2A9008AA616 /* ViewController.swift in Sources */,
+				04A59F532745CDD4008AA616 /* SmilesVC.swift in Sources */,
 				04A59F1B2745C2A9008AA616 /* AppDelegate.swift in Sources */,
 				04A59F1D2745C2A9008AA616 /* SceneDelegate.swift in Sources */,
+				04A59F4E2745CDA9008AA616 /* SpectranetVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
