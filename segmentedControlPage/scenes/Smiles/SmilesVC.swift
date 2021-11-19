@@ -15,15 +15,13 @@ class SmilesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        debugPrint("devAYZ, Yesss")
     }
     
     private func setupView() {
         view.backgroundColor = .blue
-//        printBtn.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         label?.text = "Test Here"
         
-        
+        /// Add tap recognize to view
         let tap = UITapGestureRecognizer(target: self, action:  #selector(handleViewTap))
         tap.numberOfTapsRequired = 1
         testView?.addGestureRecognizer(tap)

@@ -30,9 +30,8 @@ class ViewController: UIViewController {
             [NSAttributedString.Key.foregroundColor: UIColor.purple
             ],for: .normal)
         segControl.layer.borderWidth = 1
-//        segControl.layer.borderColor = UIColor().get
+        segControl.layer.borderColor = UIColor(red:0/255, green:225/255, blue:0/255, alpha: 1).cgColor
             
-        
         addChild(spectranet)
         addChild(smiles)
         

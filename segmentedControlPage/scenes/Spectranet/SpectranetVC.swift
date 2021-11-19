@@ -19,6 +19,5 @@ class SpectranetVC: UIViewController {
     private func setupView() {
         view.backgroundColor = .lightGray
         label?.text = "Test Here"
-    }
-    
+    }    
 }

@@ -34,13 +34,29 @@
                         <constraint firstAttribute="height" constant="44" id="JAs-Im-Y1C"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Top Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YA0-HJ-gQE">
+                    <rect key="frame" x="0.0" y="44" width="110.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Bottom Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbc-7x-5WQ">
+                    <rect key="frame" x="0.0" y="622" width="138" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Wbc-7x-5WQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0hd-D9-JgM"/>
                 <constraint firstItem="o1f-0C-lky" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="GoT-qA-7EZ"/>
                 <constraint firstItem="o1f-0C-lky" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="OCT-le-vTb"/>
+                <constraint firstItem="YA0-HJ-gQE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="XDO-q1-SIL"/>
+                <constraint firstItem="YA0-HJ-gQE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dNP-iA-W2t"/>
                 <constraint firstItem="jo6-9x-GnD" firstAttribute="top" secondItem="o1f-0C-lky" secondAttribute="bottom" constant="12" id="gX7-Zi-yng"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Wbc-7x-5WQ" secondAttribute="bottom" id="o9o-ah-4Zg"/>
                 <constraint firstItem="jo6-9x-GnD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uA5-dw-v6w"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
